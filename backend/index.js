@@ -12,6 +12,25 @@ import productRoutes from "./routes/productRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 
+
+
+// const path = require("path");
+// const express = require("express");
+// const dotenv = require("dotenv");
+// const cookieParser = require("cookie-parser");
+
+// const connectDB = require("./config/db.js");
+// const userRoutes = require("./routes/userRoutes.js");
+// const categoryRoutes = require("./routes/categoryRoutes.js");
+// const productRoutes = require("./routes/productRoutes.js");
+// const uploadRoutes = require("./routes/uploadRoutes.js");
+// const orderRoutes = require("./routes/orderRoutes.js");
+
+
+
+
+
+
 dotenv.config();
 const port = process.env.PORT || 5000;
 
