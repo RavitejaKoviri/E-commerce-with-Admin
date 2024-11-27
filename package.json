@@ -8,8 +8,8 @@
     "backend": "nodemon backend/index.js",
     "frontend": "npm run dev --prefix frontend",
     "dev": "concurrently \"npm run frontend\" \"npm run backend",
-    "frontend:build": "npm run build --prefix frontend",  // Build the React app for production
-    "backend:start": "NODE_ENV=production node backend/index.js",  // Start the backend in production
+    "frontend:build": "npm run build --prefix frontend",  
+    "backend:start": "NODE_ENV=production node backend/index.js",  
     "start": "concurrently \"npm run frontend:build\" \"npm run backend:start\""
  
   },
