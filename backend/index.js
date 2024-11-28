@@ -11,6 +11,7 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
+import cors from "cors";
 
 
 
@@ -37,7 +38,16 @@ const port = process.env.PORT || 5000;
 connectDB();
 
 const app = express();
+const allowedOrigins = [
+  "https://e-commerce-with-admin-lyart.vercel.app", // Production
+  "http://localhost:3000" // Local Development (Optional)
+];
 
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ["POST", "GET", "PUT", "DELETE"],
+  credentials: true // Allow credentials (cookies)
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
